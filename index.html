@@ -3,78 +3,111 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>ポートフォリオ - 山田 太郎</title>
+    <title>山田 太郎 — Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
-        <h1 class="logo">山田 太郎</h1>
-        <nav>
+    <header class="header">
+      <div class="wrap">
+        <a class="brand" href="index.html">Yamada Taro</a>
+        <nav class="nav" id="nav">
+          <a href="#works">Works</a>
           <a href="#about">About</a>
-          <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
+        <button id="navToggle" class="nav-toggle" aria-label="メニュー">☰</button>
       </div>
     </header>
 
     <main>
       <section class="hero">
-        <div class="container">
-          <div class="hero-inner">
-            <img class="avatar" src="img/sean-pollock-PhYq704ffdA-unsplash.jpg" alt="profile" />
-            <div>
-              <h2>フロントエンド開発者</h2>
-              <p>シンプルで美しいUIを作ります。HTML/CSS/JavaScriptを得意としています。</p>
-              <a class="cta" href="#projects">作品を見る</a>
-            </div>
+        <div class="wrap hero-inner">
+          <div class="hero-text">
+            <h1>フロントエンド開発者 — 山田 太郎</h1>
+            <p class="lead">モダンなUIとパフォーマンスを重視したウェブ開発を行います。デザインから実装まで対応。</p>
+            <p><a class="primary" href="#works">作品を見る</a> <a class="ghost" href="#contact">コンタクト</a></p>
+          </div>
+          <div class="hero-media">
+            <picture>
+              <source srcset="img/optimized/sean-pollock-PhYq704ffdA-unsplash.webp" type="image/webp">
+              <img src="img/optimized/sean-pollock-PhYq704ffdA-unsplash_thumb.jpg" alt="avatar" />
+            </picture>
           </div>
         </div>
       </section>
 
-      <section id="about" class="container about">
-        <h3>About</h3>
-        <p>私は東京都在住のウェブ開発者です。UI/UXを重視したレスポンシブなウェブサイトを制作します。</p>
-      </section>
-
-      <section id="projects" class="container projects">
-        <h3>Projects</h3>
-        <div class="grid">
-          <article class="card">
-            <img src="img/christin-hume-Hcfwew744z4-unsplash.jpg" alt="project1" />
-            <h4>Project A</h4>
-            <p>Reactを使ったダッシュボードのサンプルです。</p>
-            <a class="btn" href="project-a.html">詳細</a>
+      <section id="works" class="wrap works">
+        <h2 class="section-title">Selected Works</h2>
+        <div class="works-grid">
+          <article class="work">
+            <a href="project-a.html">
+              <figure>
+                <picture>
+                  <source srcset="img/optimized/christin-hume-Hcfwew744z4-unsplash.webp" type="image/webp">
+                  <img src="img/optimized/christin-hume-Hcfwew744z4-unsplash_thumb.jpg" alt="Project A" />
+                </picture>
+              </figure>
+              <div class="meta">
+                <h3>Project A</h3>
+                <p>React ダッシュボード — 管理画面とデータ可視化</p>
+              </div>
+            </a>
           </article>
-          <article class="card">
-            <img src="img/christina-wocintechchat-com-m-eF7HN40WbAQ-unsplash.jpg" alt="project2" />
-            <h4>Project B</h4>
-            <p>静的サイトのデザインと実装。</p>
-            <a class="btn" href="project-b.html">詳細</a>
+          <article class="work">
+            <a href="project-b.html">
+              <figure>
+                <picture>
+                  <source srcset="img/optimized/christina-wocintechchat-com-m-eF7HN40WbAQ-unsplash.webp" type="image/webp">
+                  <img src="img/optimized/christina-wocintechchat-com-m-eF7HN40WbAQ-unsplash_thumb.jpg" alt="Project B" />
+                </picture>
+              </figure>
+              <div class="meta">
+                <h3>Project B</h3>
+                <p>静的サイトのデザインと最適化</p>
+              </div>
+            </a>
           </article>
-          <article class="card">
-            <img src="img/marten-bjork-6dW3xyQvcYE-unsplash.jpg" alt="project3" />
-            <h4>Project C</h4>
-            <p>Webアニメーションの実験プロジェクト。</p>
-            <a class="btn" href="project-c.html">詳細</a>
+          <article class="work">
+            <a href="project-c.html">
+              <figure>
+                <picture>
+                  <source srcset="img/optimized/marten-bjork-6dW3xyQvcYE-unsplash.webp" type="image/webp">
+                  <img src="img/optimized/marten-bjork-6dW3xyQvcYE-unsplash_thumb.jpg" alt="Project C" />
+                </picture>
+              </figure>
+              <div class="meta">
+                <h3>Project C</h3>
+                <p>Webアニメーション実験 — Canvas / GSAP</p>
+              </div>
+            </a>
           </article>
         </div>
       </section>
 
-      <section id="contact" class="container contact">
-        <h3>Contact</h3>
-        <form id="contactForm">
-          <label>お名前<input type="text" name="name" required /></label>
-          <label>メール<input type="email" name="email" required /></label>
-          <label>メッセージ<textarea name="message" required></textarea></label>
-          <button type="submit">送信</button>
-          <p id="formMsg" class="sr-only"></p>
+      <section id="about" class="wrap about">
+        <h2 class="section-title">About</h2>
+        <p>東京都在住。プロダクトのUI設計から実装、パフォーマンス改善までを担当します。主にフロントエンドを専門にしています。</p>
+      </section>
+
+      <section id="contact" class="wrap contact">
+        <h2 class="section-title">Contact</h2>
+        <form id="contactForm" class="contact-form">
+          <div class="fields">
+            <label>お名前<input type="text" name="name" required></label>
+            <label>メール<input type="email" name="email" required></label>
+            <label class="full">メッセージ<textarea name="message" rows="6" required></textarea></label>
+          </div>
+          <div class="actions">
+            <button type="submit" class="primary">送信</button>
+            <p id="formMsg" class="form-msg" aria-live="polite"></p>
+          </div>
         </form>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">© 2026 山田 太郎</div>
+    <footer class="footer">
+      <div class="wrap">© 2026 山田 太郎 — Built with HTML/CSS/JS</div>
     </footer>
 
     <script src="script.js"></script>
