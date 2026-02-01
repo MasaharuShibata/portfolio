@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ポートフォリオ - 山田 太郎</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo">山田 太郎</h1>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-inner">
+            <img class="avatar" src="img/sean-pollock-PhYq704ffdA-unsplash.jpg" alt="profile" />
+            <div>
+              <h2>フロントエンド開発者</h2>
+              <p>シンプルで美しいUIを作ります。HTML/CSS/JavaScriptを得意としています。</p>
+              <a class="cta" href="#projects">作品を見る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="container about">
+        <h3>About</h3>
+        <p>私は東京都在住のウェブ開発者です。UI/UXを重視したレスポンシブなウェブサイトを制作します。</p>
+      </section>
+
+      <section id="projects" class="container projects">
+        <h3>Projects</h3>
+        <div class="grid">
+          <article class="card">
+            <img src="img/christin-hume-Hcfwew744z4-unsplash.jpg" alt="project1" />
+            <h4>Project A</h4>
+            <p>Reactを使ったダッシュボードのサンプルです。</p>
+            <a class="btn" href="project-a.html">詳細</a>
+          </article>
+          <article class="card">
+            <img src="img/christina-wocintechchat-com-m-eF7HN40WbAQ-unsplash.jpg" alt="project2" />
+            <h4>Project B</h4>
+            <p>静的サイトのデザインと実装。</p>
+            <a class="btn" href="project-b.html">詳細</a>
+          </article>
+          <article class="card">
+            <img src="img/marten-bjork-6dW3xyQvcYE-unsplash.jpg" alt="project3" />
+            <h4>Project C</h4>
+            <p>Webアニメーションの実験プロジェクト。</p>
+            <a class="btn" href="project-c.html">詳細</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="container contact">
+        <h3>Contact</h3>
+        <form id="contactForm">
+          <label>お名前<input type="text" name="name" required /></label>
+          <label>メール<input type="email" name="email" required /></label>
+          <label>メッセージ<textarea name="message" required></textarea></label>
+          <button type="submit">送信</button>
+          <p id="formMsg" class="sr-only"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© 2026 山田 太郎</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
