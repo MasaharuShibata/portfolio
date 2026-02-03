@@ -20,9 +20,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
@@ -31,4 +28,4 @@ jobs:
           aws-region: ap-northeast-1
 
       - name: Sync to S3
-        run: aws s3 sync dist s3://portfolio1969-4042-7175.example.com
+        run: aws s3 sync . s3://portfolio1969-4042-7175.example.com --delete --exclude "node_modules/*" --exclude ".git/*" --exclude ".github/*"
